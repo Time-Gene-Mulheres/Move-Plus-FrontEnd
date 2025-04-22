@@ -1,3 +1,4 @@
+import Categoria from "./Categoria";
 
 export default interface Usuario{
     id?: number| null;
@@ -7,5 +8,5 @@ export default interface Usuario{
     foto: string;
     altura: number;
     peso: number;
-    //categoria?:Categoria[] | null;
+    categoria?:Categoria[] | null;
 }
