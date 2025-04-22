@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function Navbar() {
     return (
         <>
@@ -11,7 +13,7 @@ function Navbar() {
                         Usuário
                         Categoria
                         Cadastrar Categoria
-                        Treino
+                       <Link to='/treinos' className="hover:underline">Treino</Link> 
                         Sair
                     </div>
                 </div>
