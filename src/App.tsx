@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer'
 import ListaTreinos from './components/treinos/listatreinos/ListaTreinos'
 
 import FormUsuario from './components/usuarios/formusuarios/FormUsuario'
+import FormCategoria from './components/categoria/formcategoria/FormCategoria'
 
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
         {/* rota usuario */}
 
         <Route path='/usuarios' element={<FormUsuario/>}/>
+
+        <Route path='/cadastrarcategoria' element={<FormCategoria/>}/>
+        <Route path='/editarcategoria/:id' element={<FormCategoria/>}/>
 
       </Routes>
       <Footer/>
