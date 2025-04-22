@@ -2,7 +2,7 @@ function Navbar() {
     return (
         <>
             <div className='w-full flex justify-center py-4
-            bg-indigo-900 text-white'>
+            bg-264653 text-black'>
             
                 <div className="container flex justify-between text-lg">
                     Move Plus
