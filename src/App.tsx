@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
 import ListaCategorias from './components/categoria/listacategoria/ListaCategorias'
 import Footer from './components/footer/Footer'
+import FormUsuario from './components/usuarios/formusuarios/FormUsuario'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/categorias' element={<ListaCategorias/>}/>
         {/* rota Treino apenas para visualização*/}
-        {/* rota usuario */}
+        <Route path='/usuarios' element={<FormUsuario/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
