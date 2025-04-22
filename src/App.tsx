@@ -13,10 +13,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/categorias' element={<ListaCategorias/>}/>
+        {/* rota Treino apenas para visualização*/}
+        {/* rota usuario */}
       </Routes>
       <Footer/>
     </BrowserRouter>
-
+    
     </>
   );
 }
