@@ -9,6 +9,7 @@ import ListaTreinos from './components/treinos/listatreinos/ListaTreinos'
 
 import FormUsuario from './components/usuarios/formusuarios/FormUsuario'
 import FormCategoria from './components/categoria/formcategoria/FormCategoria'
+import DeletarCategoria from './components/categoria/deletarcategoria/DeletarCategoria'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
 
         <Route path='/cadastrarcategoria' element={<FormCategoria/>}/>
         <Route path='/editarcategoria/:id' element={<FormCategoria/>}/>
+        <Route path='/deletarcategoria/:id' element={<DeletarCategoria/>}/>
 
       </Routes>
       <Footer/>
