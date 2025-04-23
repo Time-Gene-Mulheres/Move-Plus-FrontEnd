@@ -33,7 +33,7 @@ function FormUsuario() {
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
         setUsuario({
             ...usuario,
-            [e.target.name]: e.target.value.trim()
+            [e.target.name]: e.target.value
         });
     }
 

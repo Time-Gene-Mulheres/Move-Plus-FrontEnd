@@ -51,7 +51,7 @@ function FormCategoria() {
     })
   }
   function retornar() {
-    navigate("/dadosusuario/:id")
+    navigate("/usuarios/")
   }
   async function gerarNovoTema(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()

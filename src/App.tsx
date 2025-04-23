@@ -35,7 +35,7 @@ function App() {
 
         {/* rota usuario */}
 
-        <Route path='/usuarios' element={<FormUsuario/>}/>
+        {/* <Route path='/usuarios' element={<FormUsuario/>}/> */}
 
         <Route path='/cadastrarcategoria' element={<FormCategoria/>}/>
         <Route path='/editarcategoria/:id' element={<FormCategoria/>}/>

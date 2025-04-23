@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import Categoria from '../../../models/Categoria'
+import CardTreinos from '../../treinos/cardtreinos/CardTreinos'
+import Treino from '../../../models/Treino';
 
 interface CardCategoriasProps{
     categoria: Categoria
@@ -13,6 +15,12 @@ function CardCategorias({ categoria }: CardCategoriasProps) {
             </header>
             <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.descricao}</p>
             <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.usuario?.nome}</p>
+
+            <div className='flex col-3 gap-5 p-5'>
+              {categoria.treino?.map((treino) => (
+                <CardTreinos key={treino.id} treino={treino} />
+              ))}
+            </div>
             
             <div className="flex">
                 <Link to={`/editarcategoria/${categoria.id}`}
