@@ -13,6 +13,7 @@ const navigate = useNavigate();
 async function buscarUsuarioPorId(id: string) {
     try {
 await buscar(`/usuarios/${id}`, setUsuario)
+await buscar(`/usuarios/imc/${id}`, setUsuarioIMC);
     } catch (error: any) {
         alert("Deu erro aí")
     }
@@ -41,7 +42,7 @@ useEffect(() => {
         <p><strong>Foto:</strong> {usuario.foto}</p>
         <p><strong>Altura:</strong> {usuario.altura} m</p>
         <p><strong>Peso:</strong> {usuario.peso} kg</p>
-        <p><strong>IMC:</strong> {usuarioIMC?.imc}</p>
+        <p><strong>IMC:</strong> {usuarioIMC?.imc.toFixed(2)}</p>
 
     </div>
 
