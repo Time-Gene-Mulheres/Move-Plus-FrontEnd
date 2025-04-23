@@ -3,25 +3,22 @@ import { Link } from "react-router-dom"
 function Navbar() {
     return (
         <>
-            <div className='w-full flex justify-center py-4
-            bg-264653 text-black'>
+            <div className='w-full flex justify-between items-center px-8 py-4
+            bg-[#264653] text-[#e9c46a]'>
             
                 <div className="container flex justify-between text-lg">
-                    Move Plus
+                <Link to='/home' className="text-2xl font-bold">
+                  Move Plus
+                </Link>
 
-                    <div className='flex gap-4'>
-                    <Link to='/usuarios' className='hover:underline'>Usuarios</Link>
-
-                    <Link to='/cadastrartreinos' className='hover:underline'>Cadastrar Treino</Link>
-
-                    <Link to='/cadastrarcategoria' className="hover:underline">Cadastrar Categoria</Link> 
-                        
-                    <Link to='/' className="hover:underline">Sair</Link>
-
-
+                    <div className='flex gap-4 text-lg'>
+                        <Link to='/usuario'>Usuário</Link>
+                        <Link to='/cadastrartreinos'>Cadastrar Treino</Link>
+                        <Link to='/cadastrarcategoria'>Cadastrar Categoria</Link>
+                        <Link to='/login'>Sair</Link>
                     </div>
-                </div>
             </div>
+            
         </>
     )
 }
