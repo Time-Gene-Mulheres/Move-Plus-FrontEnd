@@ -41,8 +41,7 @@ function ListaTreinos() {
                                 <CardTreinos key={treino.id} treino={treino} />
                                 
                             ))}  
-
-                            treinos                                  
+                                                             
                     </div>
                 </div>
             </div>

@@ -8,12 +8,16 @@ import { RotatingLines } from "react-loader-spinner";
 
 function FormTreinos() {
     const navigate = useNavigate();
-    const { id } = useParams<{ id: string }>();
+   
 
     const [categorias, setCategorias] = useState<Categoria[]>([]);
     const [categoria, setCategoria] = useState<Categoria>({ id: 0, descricao: '' });
+
     const [treino, setTreino] = useState<Treino>({} as Treino);
+
     const [carregandoTreino, setCarregandoTreino] = useState(false);
+
+    const { id } = useParams<{ id: string }>();
 
     async function buscarTreinoPorId(id: string) {
         try {
@@ -47,8 +51,8 @@ function FormTreinos() {
     }, [id]);
 
     useEffect(() => {
-        setTreino((prevTreino) => ({
-            ...prevTreino,
+        setTreino(() => ({
+            ...treino,
             categoria: categoria
         }));
     }, [categoria]);

@@ -12,7 +12,7 @@ function CardTreinos({ treino }: CardTreinosProps) {
         <div className='border-slate-900 border 
             flex flex-col rounded overflow-hidden justify-between'>
                 
-            <div>
+            <div>                          
                 <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
                     <h4 className='text-lg font-semibold uppercase'>{treino.nome}</h4>
                 </div>
