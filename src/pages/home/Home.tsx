@@ -1,3 +1,5 @@
+import ListaTreinos from "../../components/treinos/listatreinos/ListaTreinos"
+import ModalTreinos from "../../components/treinos/modaltreinos/ModalTreinos"
 import { Link } from "react-router-dom"
 
 function Home() {
@@ -18,7 +20,7 @@ function Home() {
                             <div className='rounded text-[#e9c46a]
                                             border-[#e9c46a] border-solid border-2 py-2 px-4'
                                 >
-                            <Link to='/novoTreino'>Novo Treino</Link>
+                            <Link to='/usuarios'>Acessar Alunos</Link>
                             </div>
                         </div>
                     </div>
@@ -32,6 +34,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <ListaTreinos />
         </>
     )
 }
