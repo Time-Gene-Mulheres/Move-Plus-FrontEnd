@@ -13,7 +13,7 @@ function Navbar() {
                     <Link to='/usuarios' className='hover:underline'>Usuarios</Link>
                         Categoria
                         Cadastrar Categoria
-                        Treino
+                       <Link to='/treinos' className="hover:underline">Treino</Link> 
                         Sair
 
 
