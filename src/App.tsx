@@ -10,7 +10,10 @@ import ListaTreinos from './components/treinos/listatreinos/ListaTreinos'
 import FormUsuario from './components/usuarios/formusuarios/FormUsuario'
 import FormCategoria from './components/categoria/formcategoria/FormCategoria'
 import DeletarCategoria from './components/categoria/deletarcategoria/DeletarCategoria'
-
+import ListaUsuarios from './components/usuarios/listausuarios/ListaUsuarios'
+import DadosUsuario from './components/usuarios/dadosusuario/DadosUsuario'
+import DeletarUsuario from './components/usuarios/cardusuarios/deletarusuario/DeletarUsuario'
+import ImcUsuario from './components/usuarios/imcusuario/ImcUsuario'
 
 function App() {
   return (
@@ -31,6 +34,12 @@ function App() {
         <Route path='/editarcategoria/:id' element={<FormCategoria/>}/>
         <Route path='/deletarcategoria/:id' element={<DeletarCategoria/>}/>
 
+        <Route path='/cadastro' element={<FormUsuario/>}/>
+        <Route path="/usuarios" element={<ListaUsuarios />} />
+        <Route path="/dadosusuario/:id" element={<DadosUsuario />} />
+        <Route path="/editarcadastro/:id" element={<FormUsuario />} />
+        <Route path="/deletarusuario/:id" element={<DeletarUsuario />} />
+        <Route path="/imc/:id" element={<ImcUsuario />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

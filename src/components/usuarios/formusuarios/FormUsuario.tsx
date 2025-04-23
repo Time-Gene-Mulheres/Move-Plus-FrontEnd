@@ -33,19 +33,21 @@ function FormUsuario() {
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
         setUsuario({
             ...usuario,
-            [e.target.name]: e.target.value
-        })
+            [e.target.name]: e.target.value.trim()
+        });
     }
 
     function retornar() {
         navigate("/usuarios")
     }
 
-    async function gerarNovaCategoria(e: ChangeEvent<HTMLFormElement>) {
+    async function gerarNovoUsuario(e: ChangeEvent<HTMLFormElement>) {
+    
         e.preventDefault()
         setIsLoading(true)
 
         if (id !== undefined) {
+            //usuario.id = Number(id);
             try {
                 await atualizar(`/usuarios`, usuario, setUsuario)
                 alert('O Usuario foi atualizado com sucesso!')
@@ -59,9 +61,7 @@ function FormUsuario() {
     } else 
         {
             try {
-                await cadastrar(`/usuarios`, usuario, setUsuario
-
-                )
+                await cadastrar(`/usuarios`, usuario, setUsuario)
                 alert('O Usuário foi cadastrado com sucesso!')
             } catch (error: any) {
                 if (error.toString().includes('403')) {
@@ -79,12 +79,13 @@ function FormUsuario() {
 
     return (
         <div className="container flex  text-fuchsia-950 flex-col items-center justify-center mx-auto">
+            
             <h1 className="text-4xl font-bold text-center my-8">
-                Cadastrar Usuario
+            {id === undefined ? 'Cadastrar' : 'Atualizar'}
             </h1>
 
-            <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
-            <div className="flex flex-col font-bold gap-2">
+            <form className="w-1/2 flex flex-col gap-3" onSubmit={gerarNovoUsuario}>
+            <div className="flex flex-col font-bold gap-1">
                     <label htmlFor="nome">Nome: </label>
                     <input
                         type="text"
@@ -96,7 +97,7 @@ function FormUsuario() {
                     />
                 </div>
 
-                <div className="flex flex-col font-bold gap-2">
+                <div className="flex flex-col font-bold gap-1">
                     <label htmlFor="usuario">Usuario: </label>
                     <input
                         type="text"
@@ -108,7 +109,7 @@ function FormUsuario() {
                     />
                 </div>
                                 
-                <div className="flex flex-col font-bold gap-2">
+                <div className="flex flex-col font-bold gap-1">
                     <label htmlFor="senha">Senha: </label>
                     <input
                         type="text"
@@ -119,6 +120,44 @@ function FormUsuario() {
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
+
+                <div className="flex flex-col font-bold gap-1">
+                    <label htmlFor="foto">Foto: </label>
+                    <input
+                        type="text"
+                        placeholder="Informe a foto"
+                        name='foto'
+                        className="border-2 border-slate-700 rounded p-2"
+                        value={usuario.foto}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+                </div>
+
+                <div className="flex flex-col font-bold gap-1">
+                    <label htmlFor="altura">Altura: </label>
+                    <input
+                        type="text"
+                        placeholder="Informe a altura"
+                        name='altura'
+                        className="border-2 border-slate-700 rounded p-2"
+                        value={usuario.altura}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+                </div>
+
+                <div className="flex flex-col font-bold gap-1">
+                    <label htmlFor="peso">Peso: </label>
+                    <input
+                        type="text"
+                        placeholder="Informe o peso"
+                        name='peso'
+                        className="border-2 border-slate-700 rounded p-2"
+                        value={usuario.peso}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                    />
+                </div>
+
+
                 <button
                     className="rounded text-slate-100 bg-fuchsia-800
                         hover:bg-fuchsia-900 w-1/2 py-2 mx-auto flex justify-center"

@@ -10,11 +10,13 @@ function Navbar() {
                     Move Plus
 
                     <div className='flex gap-4'>
-                        Usuário
+                    <Link to='/usuarios' className='hover:underline'>Usuarios</Link>
                         Categoria
                         Cadastrar Categoria
                        <Link to='/treinos' className="hover:underline">Treino</Link> 
                         Sair
+
+
                     </div>
                 </div>
             </div>
