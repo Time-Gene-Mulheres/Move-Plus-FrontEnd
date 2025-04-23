@@ -2,7 +2,7 @@
 function Home() {
     return (
         <>
-            <div className="bg-[#264653] flex justify-center">
+            <div className="bg-[#264653]  h-screen">
                 <div className='container grid grid-cols-2 text-[#e9c46a]'>
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
                         <h2 className='text-5xl font-bold'>
@@ -15,18 +15,21 @@ function Home() {
 
                         <div className="flex justify-around gap-4">
                             <div className='rounded text-[#e9c46a]
-                                            border-[#e9c46a] border-solid border-2 py-2 px-4'
+                                            py-2 px-4'
                                 >
-                                Novo Treino
+                                <button className="bg-[#264653] text-[#e9c46a] border border-[#e9c46a] border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+                                    <span className="bg-sky-400 shadow-sky-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+                                            Novo Treino
+                                </button>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex justify-end">
                         <img
-                            src="https://cdn.discordapp.com/attachments/1349737011212320849/1364356931883503716/mulherresmamlhando.png?ex=68095fe9&is=68080e69&hm=2e1cef7e2d4e2c18b8c0343b9235fe3cf7aae38107f7e2618d3e125ef3da5a5f&"
+                            src="https://i.imgur.com/2JF7D4E.png"
                             alt="Imagem Página Home"
-                            className='w-full md:w-2/3 mr-0 md:mr-10'
+                            className='w-3/3'
                         />
                     </div>
                 </div>
