@@ -7,6 +7,7 @@ import { DNA } from "react-loader-spinner";
 
 function ListaTreinos() {
 
+   
     const [treinos, setTreinos] = useState<Treino[]>([])
 
     async function buscarTreinos() {
@@ -51,3 +52,9 @@ function ListaTreinos() {
 }
 
 export default ListaTreinos;
+
+
+
+
+
+

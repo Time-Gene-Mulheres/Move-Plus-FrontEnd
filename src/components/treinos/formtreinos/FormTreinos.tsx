@@ -65,7 +65,7 @@ function FormTreinos() {
         });
     }
 
-    async function gerarNovaPostagem(e: FormEvent<HTMLFormElement>) {
+    async function gerarNovoTreino(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
         setCarregandoTreino(true);
 
@@ -93,7 +93,7 @@ function FormTreinos() {
         <div className="container flex flex-col mx-auto items-center">
             <h1 className="text-4xl text-center my-8">{id ? 'Editar' : 'Cadastrar'} Treino</h1>
 
-            <form className="flex flex-col w-1/2 gap-4" onSubmit={gerarNovaPostagem}>
+            <form className="flex flex-col w-1/2 gap-4" onSubmit={gerarNovoTreino}>
                 <div className="flex flex-col gap-2">
                     <label>Nome do Treino</label>
                     <input
@@ -171,7 +171,7 @@ function FormTreinos() {
                     {carregandoTreino ? (
                         <RotatingLines strokeColor="white" strokeWidth="5" animationDuration="0.75" width="24" visible={true} />
                     ) : (
-                        <span>{id ? 'Atualizar' : 'Cadastrar'}</span>
+                        <span>{id !== undefined ? 'Atualizar' : 'Cadastrar'}</span>
                     )}
                 </button>
             </form>

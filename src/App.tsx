@@ -5,10 +5,12 @@ import Home from './pages/home/Home'
 import ListaCategorias from './components/categoria/listacategoria/ListaCategorias'
 import Footer from './components/footer/Footer'
 
-import ListaTreinos from './components/treinos/listatreinos/ListaTreinos'
+
 
 import FormUsuario from './components/usuarios/formusuarios/FormUsuario'
 import FormTreinos from './components/treinos/formtreinos/FormTreinos'
+import ListaTreinos from './components/treinos/listatreinos/ListaTreinos'
+import DeletarTreino from './components/treinos/deletartreinos/DeletarTreino'
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
         <Route path="/treinos" element={<ListaTreinos/>} />
         <Route path="/cadastrartreinos" element={<FormTreinos />} />
         <Route path="/editartreinos/:id" element={<FormTreinos />} />
+        <Route path="/deletartreino/:id" element={<DeletarTreino />} />
 
 
         {/* rota usuario */}
