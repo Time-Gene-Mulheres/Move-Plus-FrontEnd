@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 function Home() {
     return (
@@ -17,7 +18,7 @@ function Home() {
                             <div className='rounded text-[#e9c46a]
                                             border-[#e9c46a] border-solid border-2 py-2 px-4'
                                 >
-                                Novo Treino
+                            <Link to='/novoTreino'>Novo Treino</Link>
                             </div>
                         </div>
                     </div>
