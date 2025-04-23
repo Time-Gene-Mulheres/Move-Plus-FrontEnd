@@ -1,3 +1,5 @@
+import ListaTreinos from "../../components/treinos/listatreinos/ListaTreinos"
+import ModalTreinos from "../../components/treinos/modaltreinos/ModalTreinos"
 
 function Home() {
     return (
@@ -16,7 +18,7 @@ function Home() {
                             <div className='rounded text-white 
                                             border-white border-solid border-2 py-2 px-4'
                                 >
-                                Nova Treino
+                                <ModalTreinos/>
                             </div>
                         </div>
                     </div>
@@ -30,6 +32,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <ListaTreinos />
         </>
     )
 }
