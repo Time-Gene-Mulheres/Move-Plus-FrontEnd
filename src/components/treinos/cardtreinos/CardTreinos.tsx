@@ -20,7 +20,7 @@ function CardTreinos({ treino }: CardTreinosProps) {
                     <p>Descrição: {treino.descricao}</p>
                     <p>Duração: {treino.duracao}</p>
                     <p>Intensidade: {treino.intensidade}</p>
-                    <p>Categoria:{treino.categoria?.map((categoria) => categoria.id)}</p>                 
+                    <p>Categoria:{treino.categoria?.id}</p>                 
                 </div>
             </div>
             <div className="flex">
@@ -40,4 +40,3 @@ function CardTreinos({ treino }: CardTreinosProps) {
 }
 
 export default CardTreinos
-
