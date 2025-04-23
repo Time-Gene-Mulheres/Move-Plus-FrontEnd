@@ -17,7 +17,7 @@ function FormUsuario() {
 
     async function buscarPorId(id: string) {
         try {
-            await buscar(`/cadastro/${id}`, setUsuario,)
+            await buscar(`/usuarios/${id}`, setUsuario,)
         } catch (error: any) {
             if (error.toString().includes('404')) {
             }
@@ -47,25 +47,21 @@ function FormUsuario() {
         setIsLoading(true)
 
         if (id !== undefined) {
-            usuario.id = Number(id);
+            //usuario.id = Number(id);
             try {
                 await atualizar(`/usuarios`, usuario, setUsuario)
                 alert('O Usuario foi atualizado com sucesso!')
             } catch (error: any) {
                 if (error.toString().includes('404')) {
                 } else {
-                    console.log("Enviando usuário:", usuario);
                     alert('Erro ao atualizar o usuário.')
-                   // console.log(usuario);
                 }
 
             }
     } else 
         {
             try {
-                await cadastrar(`/usuarios`, usuario, setUsuario
-
-                )
+                await cadastrar(`/usuarios`, usuario, setUsuario)
                 alert('O Usuário foi cadastrado com sucesso!')
             } catch (error: any) {
                 if (error.toString().includes('403')) {
@@ -83,8 +79,9 @@ function FormUsuario() {
 
     return (
         <div className="container flex  text-fuchsia-950 flex-col items-center justify-center mx-auto">
+            
             <h1 className="text-4xl font-bold text-center my-8">
-                Cadastrar Usuario
+            {id === undefined ? 'Cadastrar' : 'Atualizar'}
             </h1>
 
             <form className="w-1/2 flex flex-col gap-3" onSubmit={gerarNovoUsuario}>
