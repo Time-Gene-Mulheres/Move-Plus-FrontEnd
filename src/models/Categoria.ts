@@ -5,5 +5,5 @@ export default interface Categoria {
     id?: number | null
     descricao: string
     usuario?: Usuario | null
-    treino?: Treino | null
+    treino?: Treino[] | null
 }

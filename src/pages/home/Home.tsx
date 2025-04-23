@@ -1,3 +1,6 @@
+import ListaTreinos from "../../components/treinos/listatreinos/ListaTreinos"
+import ModalTreinos from "../../components/treinos/modaltreinos/ModalTreinos"
+import { Link } from "react-router-dom"
 
 function Home() {
     return (
@@ -17,10 +20,7 @@ function Home() {
                             <div className='rounded text-[#e9c46a]
                                             py-2 px-4'
                                 >
-                                <button className="bg-[#264653] text-[#e9c46a] border border-[#e9c46a] border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
-                                    <span className="bg-sky-400 shadow-sky-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
-                                            Novo Treino
-                                </button>
+                            <Link to='/usuarios'>Acessar Alunos</Link>
                             </div>
                         </div>
                     </div>
@@ -34,6 +34,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <ListaTreinos />
         </>
     )
 }
