@@ -6,5 +6,6 @@ export default interface Treino {
     descricao: string
     duracao: number
     intensidade: string
-    categoria: Categoria[] | null
+    categoria: Categoria | null
+  
 }

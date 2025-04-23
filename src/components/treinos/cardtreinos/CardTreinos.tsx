@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Treino from '../../../models/Treino'
 
 
+
 interface CardTreinosProps {
     treino: Treino
 }
@@ -13,20 +14,13 @@ function CardTreinos({ treino }: CardTreinosProps) {
                 
             <div>
                 <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
-                    <img
-                        src={treino.usuario?.foto}
-                        className='h-12 rounded-full'
-                        alt={treino.usuario?.nome} />
-                    <h3 className='text-lg font-bold text-center uppercase'>
-                        {treino.usuario?.nome}
-                    </h3>
+                    <h4 className='text-lg font-semibold uppercase'>{treino.nome}</h4>
                 </div>
-                <div className='p-4 '>
-                    <h4 className='text-lg font-semibold uppercase'>{treino.categoria}</h4>
-                    <p>Nome:{treino.nome}</p>
+                <div className='p-4'>                   
                     <p>Descrição: {treino.descricao}</p>
                     <p>Duração: {treino.duracao}</p>
                     <p>Intensidade: {treino.intensidade}</p>
+                    <p>Categoria:{treino.categoria?.map((categoria) => categoria.id)}</p>                 
                 </div>
             </div>
             <div className="flex">

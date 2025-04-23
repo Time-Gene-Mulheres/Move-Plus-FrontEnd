@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer'
 import ListaTreinos from './components/treinos/listatreinos/ListaTreinos'
 
 import FormUsuario from './components/usuarios/formusuarios/FormUsuario'
+import FormTreinos from './components/treinos/formtreinos/FormTreinos'
 
 
 function App() {
@@ -19,8 +20,11 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/categorias' element={<ListaCategorias/>}/>
         {/* rota Treino apenas para visualização*/}
-
         <Route path="/treinos" element={<ListaTreinos/>} />
+        <Route path="/cadastrartreinos" element={<FormTreinos />} />
+        <Route path="/editartreinos/:id" element={<FormTreinos />} />
+
+
         {/* rota usuario */}
 
         <Route path='/usuarios' element={<FormUsuario/>}/>
