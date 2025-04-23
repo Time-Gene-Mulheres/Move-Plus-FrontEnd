@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Usuario from "../../../models/Usuario";
 import { buscar } from "../../../service/Service";
+import UsuarioImc from '../../../models/UsuarioImc';
 
 function DadosUsuario() {
 const { id } = useParams<{ id: string }>();
 const [usuario, setUsuario] = useState<Usuario | null>(null);
+const [usuarioIMC, setUsuarioIMC] = useState<UsuarioImc | null> (null);
 const navigate = useNavigate();
 
 async function buscarUsuarioPorId(id: string) {
@@ -39,6 +41,8 @@ useEffect(() => {
         <p><strong>Foto:</strong> {usuario.foto}</p>
         <p><strong>Altura:</strong> {usuario.altura} m</p>
         <p><strong>Peso:</strong> {usuario.peso} kg</p>
+        <p><strong>IMC:</strong> {usuarioIMC?.imc}</p>
+
     </div>
 
     <div className="flex flex-wrap justify-start gap-3">
