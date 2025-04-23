@@ -334,7 +334,7 @@ function FormTreinos() {
 
                 <div className="flex flex-col gap-2">
                     <p>Categoria do Treino</p>
-                    <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded'
+                     <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded'
                         onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}
                     >
                         <option value="" selected disabled>Selecione uma Categoria</option>
@@ -345,8 +345,7 @@ function FormTreinos() {
                             </>
                         ))}
 
-                    </select>
-                   
+                    </select>                   
                    
                 </div>
 
